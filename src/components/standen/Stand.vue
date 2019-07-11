@@ -1,6 +1,7 @@
 <template>
   <div>
   	<table>
+  	<h2>Standen</h2>
 	  <tr>
 	    <th class="teamnaam">Hoofdklasse</th>
 	    <th class="data">Ges</th>

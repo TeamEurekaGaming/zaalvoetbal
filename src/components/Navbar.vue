@@ -7,27 +7,27 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <router-link to="/uistlagen">Uitslagen</router-link>
+            <router-link to="/uitslagen">Uitslagen</router-link>
             <router-link to="/wedstrijden">Wedstrijden</router-link>
             <router-link to="/standen">Standen</router-link>
             <router-link to="/beker">Beker</router-link>
           </div>
         </div> 
-        <router-link to="/uistlagen">Clubs</router-link>
+        <router-link to="/clubs">Clubs</router-link>
         <div class="dropdown">
           <button class="dropbtn">Info 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <router-link to="/uistlagen">Bestuur</router-link>
-            <router-link to="/wedstrijden">Sporthallen</router-link>
-            <router-link to="/uistlagen">Regels</router-link>
-            <router-link to="/wedstrijden">Strafzaken</router-link>
-            <router-link to="/standen">Formulieren</router-link>
-            <router-link to="/beker">Ledenadministratie</router-link>
+            <router-link to="/bestuur">Bestuur</router-link>
+            <router-link to="/sporthallen">Sporthallen</router-link>
+            <router-link to="/regels">Regels</router-link>
+            <router-link to="/strafzaken">Strafzaken</router-link>
+            <router-link to="/formulieren">Formulieren</router-link>
+            <router-link to="/ledenadministratie">Ledenadministratie</router-link>
           </div>
         </div> 
-        <router-link to="/uistlagen">Contact</router-link>
+        <router-link to="/contact">Contact</router-link>
       </div>
   </div>
 </template>
