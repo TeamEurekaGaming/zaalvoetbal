@@ -19,15 +19,15 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <router-link to="/uistlagen">Bestuur</router-link>
-            <router-link to="/wedstrijden">Sporthallen</router-link>
+            <router-link to="/bestuur">Bestuur</router-link>
+            <router-link to="/sporthallen">Sporthallen</router-link>
             <router-link to="/uistlagen">Regels</router-link>
             <router-link to="/wedstrijden">Strafzaken</router-link>
             <router-link to="/standen">Formulieren</router-link>
             <router-link to="/beker">Ledenadministratie</router-link>
           </div>
         </div> 
-        <router-link to="/uistlagen">Contact</router-link>
+        <router-link to="/contact">Contact</router-link>
       </div>
   </div>
 </template>
@@ -53,7 +53,7 @@ export default {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
 }
 
@@ -73,10 +73,10 @@ export default {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 18px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; 
+  margin: 0; 
 }
 
 /* Add a red background color to navbar links on hover */
