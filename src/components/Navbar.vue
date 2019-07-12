@@ -21,17 +21,10 @@
           <div class="dropdown-content">
             <router-link to="/bestuur">Bestuur</router-link>
             <router-link to="/sporthallen">Sporthallen</router-link>
-<<<<<<< HEAD
             <router-link to="/regels">Regels</router-link>
             <router-link to="/strafzaken">Strafzaken</router-link>
             <router-link to="/formulieren">Formulieren</router-link>
             <router-link to="/ledenadministratie">Ledenadministratie</router-link>
-=======
-            <router-link to="/uistlagen">Regels</router-link>
-            <router-link to="/wedstrijden">Strafzaken</router-link>
-            <router-link to="/standen">Formulieren</router-link>
-            <router-link to="/beker">Ledenadministratie</router-link>
->>>>>>> a9d30eafba3184c0386a09405f4f0e320bd4ce4b
           </div>
         </div> 
         <router-link to="/contact">Contact</router-link>

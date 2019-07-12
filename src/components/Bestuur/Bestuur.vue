@@ -58,7 +58,7 @@
 
 		<div class="card">
 		  <div class="container">
-		    <h4><b>Scheidsrechter aansteller</b></h4> 
+		    <h4><b>Aansteller scheidsrechters</b></h4> 
 		    D. van Dijk (tijdelijk) <br>
 		    06-12345678<br>
 		    test@hzvf.nl

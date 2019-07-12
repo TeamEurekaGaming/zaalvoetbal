@@ -8,10 +8,7 @@ import Icon from 'vue-awesome/components/Icon'
 
 Vue.config.productionTip = false
 Vue.component('v-icon', Icon)
-<<<<<<< HEAD
-=======
 
->>>>>>> a9d30eafba3184c0386a09405f4f0e320bd4ce4b
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
