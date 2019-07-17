@@ -33,12 +33,16 @@
 	    <td>13</td>
 	  </tr>
 	</table>
+	<div v-for="data in $options.myJson">{{data}}</div>
   </div>
 </template>
 
 <script>
+import MY_JSON from './team.json'
+
 export default {
-  name: 'Stand'
+  name: 'Stand',
+  myJson: MY_JSON
 }
 </script>
 

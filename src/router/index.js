@@ -9,11 +9,15 @@ import Bestuur from '@/components/Bestuur/Bestuur'
 import Sporthal from '@/components/Sporthallen/Sporthal'
 import Club from '@/components/Clubs/Club'
 
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
     {
       path: '/home',
       name: 'Home',

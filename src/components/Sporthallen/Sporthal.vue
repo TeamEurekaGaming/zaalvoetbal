@@ -1,60 +1,15 @@
 <template>
-  <div class="Sporthal">
+  <div class="Sporthal" id="sporthal">
     <div class="box">
     	<div class="title-container">
     		<h2>Sporthallen</h2>
     	</div>
-    	<div class="card">
+    	<div class="card" v-for="sporthal in sporthallen">
 		  <div class="container">
-		    <h4><b>Sporthal De Banninghal</b></h4> 
-		   	Banningstraat 3a <br>
-			3769 AA Soesterberg<br>
-			0346-351432
-		  </div>
-		</div>
-
-		<div class="card">
-		  <div class="container">
-		    <h4><b>De Bilt HF Witte Centrum</b></h4> 
-			Henri Dunantplein 4<br>
-			3731 CL De Bilt<br>
-			030-2203954
-		  </div>
-		</div>
-
-		<div class="card">
-		  <div class="container">
-		    <h4><b>Jan Weverhal Zeist</b></h4> 
-		    Krakelingweg 5/ Hein Bottingalaan 1<br>
-			3707 HM Zeist<br>
-			030-6920272 
-		  </div>
-		</div>
-
-		<div class="card">
-		  <div class="container">
-		    <h4><b>Sporthal Dijnselburg</b></h4> 
-			Badmeester Schenkpad 2<br>
-			3705 GK Zeist<br>
-			06-21485342
-		  </div>
-		</div>
-
-		<div class="card">
-		  <div class="container">
-		    <h4><b>Health Center Hoenderdaal </b></h4> 
-		    Hoenderseweg 7<br>
-			3972 NA Driebergen<br>
-			0343-529333	
-		  </div>
-		</div>
-
-		<div class="card">
-		  <div class="container">
-		    <h4><b>Sporthal K.N.V.B.</b></h4> 
-			Woudenbergseweg 56<br>
-			3707 HX Zeist<br>
-			0343-491224
+		    <h4><b>{{ sporthal.naam }}</b></h4> 
+		   	{{ sporthal.adres }} <br>
+			{{ sporthal.postcode }} {{ sporthal.woonplaats }}<br>
+			{{ sporthal.telefoon }}
 		  </div>
 		</div>
     </div>
@@ -62,8 +17,28 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+
+var api = "http://localhost/api/sporthal/read.php";
+var naam = null;
+
 export default {
-  name: 'Sporthal'
+  name: 'Sporthal',
+  data () {
+    return {
+      sporthallen: null
+    }
+  },
+  mounted () {
+    axios
+      .get(api)
+      .then(response => (this.sporthallen = response.data.records ))
+  }
+
 }
 
 </script>

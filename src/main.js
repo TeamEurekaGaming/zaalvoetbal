@@ -5,7 +5,11 @@ import App from './App'
 import router from './router'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+ 
+Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 Vue.component('v-icon', Icon)
 

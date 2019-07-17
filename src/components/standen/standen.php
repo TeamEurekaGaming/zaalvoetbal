@@ -1,13 +1,36 @@
 <?php 
+$servername = "localhost";
+$username = "root";
+$password = "";
 
-	// teams per klasse
-	$team[0] = "ZVV DOZ";
-	$team[1] = "ASU";
-	$team[2] = "One Hope United";
-	$team[3] = "LEBD";
-	$klasse = array($team[0], $team[1], $team[2], $team[3]);
+	try {
+	    $conn = new PDO("mysql:host=$servername;dbname=zaalvoetbal", $username, $password);
+	    // set the PDO error mode to exception
+	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	    echo "Connected successfully"; 
+	    }
+	catch(PDOException $e)
+	    {
+	    echo "Connection failed: " . $e->getMessage();
+	    }
 
-	echo $klasse;
-	
-	
+	$sql="SELECT * FROM teams"; 
+
+	$response = array();
+	$posts = array();
+	$result=mysql_query($sql);
+	while($row=mysql_fetch_array($result)) { 
+	  $title=$row['title']; 
+	  $url=$row['url']; 
+
+	  $posts[] = array('title'=> $title, 'url'=> $url);
+	} 
+
+	$response['posts'] = $posts;
+
+	$fp = fopen('results.json', 'w');
+	fwrite($fp, json_encode($response));
+	fclose($fp);
+
+	echo "fuck";
 ?>
