@@ -12,38 +12,45 @@
 	    <th class="data">DPV - DPT</th>
 	    <th class="data">Saldo</th>
 	  </tr>
-	  <tr>
-	    <td class="teamnaam">ZVV DOZ</td>
-	    <td>4</td>
-	    <td>1</td>
-	    <td>2</td>
-	    <td>1</td>
-	    <td>5</td>
-	    <td>12 - 7</td>
-	    <td>5</td>
-	  </tr>
-	  <tr>
-	    <td class="teamnaam">ZVV DOZ 2</td>
-	    <td>6</td>
-	    <td>1</td>
-	    <td>3</td>
-	    <td>2</td>
-	    <td>6</td>
-	    <td>18 - 5</td>
-	    <td>13</td>
+	  <tr v-for="stand in standen">
+	    <td class="teamnaam" > {{ stand.naam }} </td>
+	    <td>{{ stand.gespeeld }}</td>
+	    <td>{{ stand.gewonnen }}</td>
+	    <td>{{ stand.gelijk }}</td>
+	    <td>{{ stand.verloren }}</td>
+	    <td>{{ stand.pnt }}</td>
+	    <td>{{ stand.dpv }} - {{ stand.dpt }}</td>
+	    <td>{{ stand.saldo }}</td>
 	  </tr>
 	</table>
-	<div v-for="data in $options.myJson">{{data}}</div>
   </div>
 </template>
 
 <script>
-import MY_JSON from './team.json'
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+
+var api = "http://localhost/api/stand/read.php";
+var naam = null;
 
 export default {
-  name: 'Stand',
-  myJson: MY_JSON
+  name: 'Standen',
+  data () {
+    return {
+      standen: null
+    }
+  },
+  mounted () {
+    axios
+      .get(api)
+      .then(response => (this.standen = response.data.records ))
+  }
+
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
